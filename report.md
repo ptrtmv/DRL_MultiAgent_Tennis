@@ -15,26 +15,33 @@ The convergence speed was increased when we used a **hard update of the target n
 
 To solve the environment we used the following network architectures: 
 
------------ACTOR NETWORK-----------
-Actor(
-  (network): ModuleList(
-    (0): Linear(in_features=24, out_features=256, bias=True)
-    (1): Linear(in_features=256, out_features=64, bias=True)
-    (2): Linear(in_features=64, out_features=32, bias=True)
-  )
-  (outLayer): Linear(in_features=32, out_features=2, bias=True)
-)
+-----------ACTOR NETWORK-----------<br/>
+Actor(<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; (network): ModuleList(<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; (0): Linear(in_features=24, out_features=256, bias=True)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ---> Relu Activation<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; (1): Linear(in_features=256, out_features=64, bias=True)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ---> Relu Activation<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; (2): Linear(in_features=64, out_features=32, bias=True)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ---> Relu Activation<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; )<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; (outLayer): Linear(in_features=32, out_features=2, bias=True)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ---> Tanh Output Functoin<br/>
+)<br/>
 
 
------------CRITIC NETWORK-----------
-Critic(
-  (network): ModuleList(
-    (0): Linear(in_features=24, out_features=256, bias=True)
-    (1): Linear(in_features=258, out_features=128, bias=True)
-    (2): Linear(in_features=128, out_features=16, bias=True)
-  )
-  (outLayer): Linear(in_features=16, out_features=1, bias=True)
-)
+-----------CRITIC NETWORK-----------<br/>
+Critic(<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; (network): ModuleList(<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; (0): Linear(in_features=24, out_features=256, bias=True)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ---> Relu Activation<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; (1): Linear(in_features=258, out_features=128, bias=True)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ---> Relu Activation<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; (2): Linear(in_features=128, out_features=16, bias=True)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ---> Relu Activation<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; )<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; (outLayer): Linear(in_features=16, out_features=1, bias=True)<br/>
+)<br/>
 
 
 with `ReLu` activation function for the hidden layers and a `tanh` output in the case of the actor network accounting for the fact that the actions are bound between -1 and +1. 
@@ -84,11 +91,11 @@ With this parameters the environment was solved (i.e. the agents maintained an a
 
 
 <p align="center">
-  <img width="460" height="300" src="plots/training_plot_wo_PRIO.png">
+  <img width="500" height="350" src="images/training_plot_wo_PRIO.png">
 </p>
 
 <p align="center">
-  <img width="460" height="300" src="plots/training_plot_w_PRIO.png">
+  <img width="500" height="350" src="images/training_plot_w_PRIO.png">
 </p>
 
 
