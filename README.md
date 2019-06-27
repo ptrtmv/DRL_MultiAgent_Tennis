@@ -5,7 +5,7 @@ Deep Reinforcement Learning Multi Agent Environment (Unity Agent) solved using t
 
 ## Intorduction
 
-In this Deep Reinforcement Learning project we train two  Unity ML-agents to play tennis  [Unity Tennis environment](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#tennis). 
+In this Deep Reinforcement Learning project we train two  Unity ML-agents to play tennis in a [Unity environment](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#tennis). 
 
 <p align="center">
   <img width="460" height="300" src="images/tennis.png">
@@ -14,6 +14,7 @@ In this Deep Reinforcement Learning project we train two  Unity ML-agents to pla
 Each of the agents can control a racket and has to hit the ball over the net.
 
 The __state space__ is `24` dimensional. There are `8` parameters corresponding to `position and velocity`  of the ball and racket whereby each agent receives its own, local observation.    
+
 The __actions__ are `2` corresponding to the movement of the racket `up-down` and `right-left`.  Every entry in the action vector must be a number between `-1` and `1`.
 
 A __reward__ of `+0.1` is provided if an agent hits the ball over the net. If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a __negative reward__ of `-0.01`. 
