@@ -6,10 +6,9 @@ Deep Reinforcement Learning Multi Agent Environment (Unity Agent) solved using t
 ## Intorduction
 
 In this Deep Reinforcement Learning project we train two  Unity ML-agents to play tennis  [Unity Tennis environment](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#tennis). 
-. 
 
 <p align="center">
-  <img width="460" height="300" src="plots/tennis.png">
+  <img width="460" height="300" src="images/tennis.png">
 </p>
 
 Each of the agents can control a racket and has to hit the ball over the net.
