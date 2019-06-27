@@ -43,6 +43,6 @@ The packages can be directly installed while running the __Jupiter__ notebook `T
 
 ## Instructions
 
-You can run the project via the **Jupiter** notebook `Tennis.ipynb`. The classes defining the agent and its "brain" are stored in `agent.py`. The networks are defined in `networks.py`. The memory tree used for the prioritized replay buffer is saved in the `tree.py` file. We are grateful for the code provided by [__jaromiru__](https://github.com/jaromiru/AI-blog/blob/master/SumTree.py). For more information on this topic you can visit his very good blog post [here](https://jaromiru.com/2016/11/07/lets-make-a-dqn-double-learning-and-prioritized-experience-replay/). 
+You can run the project via the **Jupiter** notebook `Tennis.ipynb`. The classes defining the agent and its "brain" are stored in `agent.py`. The networks are defined in `networks.py`. The memory tree used for the prioritized replay buffer is saved in the `tree.py` file and is based on the [code provided by __jaromiru__](https://github.com/jaromiru/AI-blog/blob/master/SumTree.py) (many thanks :)). For more information on this topic you can visit his very good blog post [here](https://jaromiru.com/2016/11/07/lets-make-a-dqn-double-learning-and-prioritized-experience-replay/). 
 
 
